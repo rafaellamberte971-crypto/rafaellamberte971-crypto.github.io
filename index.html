@@ -3,30 +3,67 @@
 <head>
     <title>MEOWGICAL WORLD</title>
     <style>
-      img {
-        border: 5px solid white;
-        border-radius: 15px;
-        margin: 10px;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.1); 
-      } 
-    </style> 
+  /* This ensures the 'paper' of your website is always full screen */
+  html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    
+    /* 1. This forces the body to be at least the height of your screen */
+    min-height: 100vh; 
+    
+    /* 2. The Background Image Settings */
+    background-image: url('images/bg-body.jpg');
+    
+    /* 'cover' will now stretch the photo to leave NO empty spaces */
+    background-size: cover; 
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the photo still while you scroll */
+
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+
+  /* Keeps your content readable over the HD photo */
+  .content-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px;
+    display: inline-block;
+    max-width: 90%;
+  }
+
+  img {
+    border: 4px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+  }
+</style>
 </head>
 
-<body bgcolor="pink">
+<body> 
+    <h1 style="color: red; font-weight: 500; text-shadow: 2px 2px 4px black;">THE FIRST BABIE KITTEN</h1>
 
-    <h1 style="color: red; font-weight: 500;">THE FIRST BABIE KITTEN</h1>
-
-    <p style="color: black; font-size: 18px;">
+    <p class="content-box">
         This is a sample practice only as my 1st journey as a web developer. 
         This cat is also our first cat named "Babie Barie." The cutie cat 
         babie buntis babie girl now! I just wanna kiss her pango nose and 
         cutiee fur.
     </p>
 
+    <br>
     <img height="200px" width="200px" src="images/meowgical.jpg" alt="a photo of a grey persian cat">
     
-    <p style="color: black; font-size: 18px;">This is also her another photos with her friends</p>
+    <br>
+    <p class="content-box">This is also her another photos with her friends</p>
 
+    <br>
     <img height="200px" width="200px" src="images/1sample.jpg" alt="a group of cats in one photo"> 
     <br>
     <img height="200px" width="200px" src="images/penguin.jpg" alt="a photo of three penguins">
@@ -35,13 +72,22 @@
 
     <br><br>
 
-    <h3>Watch Babie Barie in action!</h3>
+    <p class="content-box">Watch Babie Barie in action!</p>
+
+    <br><br>
 
     <video width="320" height="560" controls>
-    <source src="images/Milk_on_the_Sill.mp4" type="video/mp4">
-</video>
-    
-    <a href="gallery.html" style="font-weight: bold; color: blue;">Click here to see more kittens</a>
+        <source src="images/mochiche-eating.mp4" type="video/mp4">
+    </video>
 
-</body>
+    <br> 
+    
+    <video width="320" height="560" controls>
+        <source src="images/Milk_on_the_Sill.mp4" type="video/mp4">
+    </video>
+    
+    <br><br>
+    <a href="gallery.html" style="font-weight: bold; color: yellow; text-decoration: none; font-size: 20px;">Click here to see more kittens</a>
+
+</body> 
 </html>
