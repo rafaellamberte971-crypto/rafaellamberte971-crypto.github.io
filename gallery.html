@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MEOWGICAL WORLD</title>
+    <title>Kitten Gallery - MEOWGICAL WORLD</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <style>
         html {
             height: 100%;
@@ -13,157 +13,131 @@
             margin: 0;
             padding: 0;
             min-height: 100vh; 
-            background-image: url('images/bg-body.jpg');
+            background-image: url('images/lokie-posing.jpg');
             background-size: cover; 
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            /* Using Lato as the base professional font */
             font-family: 'Lato', sans-serif;
             color: white;
-            line-height: 1.6; /* Adds breathing room between lines */
+            text-align: center; /* Centers everything for a balanced look */
         }
 
         h1 {
-           font-family: 'Playfair Display', serif;
-           color: #ff4d4d; 
-           font-weight: 700;
-           text-transform: uppercase;
-           letter-spacing: 5px; /* Increased spacing for elegance */
-           text-align: center;
-    
-           /* STACKED SHADOWS: This makes the text pop from every angle */
-           text-shadow: 
-            2px 2px 0px #000, 
-           -1px -1px 0px #000,  
-           1px -1px 0px #000,
-           -1px 1px 0px #000,
-           0px 0px 15px rgba(0,0,0,1); 
-        
-           margin-top: 40px;
-        }
-
-        /* The Magazine Style Content Box */
-        .content-box {
-            background-color: rgba(0, 0, 0, 0.75);
-            padding: 40px; /* More padding for a spacious feel */
-            border-radius: 4px; /* Sharper corners look more "editorial" */
-            margin: 20px;
-            display: block; /* Changed to block for better layout control */
-            max-width: 800px;
-            border-left: 5px solid yellow; /* Magazine accent stripe */
-            
-            /* Professional Typography Settings */
-            font-size: 18px;
-            letter-spacing: 0.5px;
-            text-align: justify; /* Common in print magazines */
-        }
-
-        /* Style for the first word or titles inside the box */
-        .content-box b, .content-box strong {
             font-family: 'Playfair Display', serif;
-            color: yellow;
-            font-size: 1.2em;
+            color: #ffffff;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-top: 50px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
         }
 
         .content-box {
-            display: block;          /* Takes up the full width allowed */
-            max-width: 900px;        /* Prevents lines from being too long to read */
-            margin: 40px auto;       /* The 'auto' centers the box on big screens */
-            width: 90%;              /* Ensures it stays small on mobile */
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
+            padding: 20px 40px;
+            border-radius: 4px;
+            margin: 20px auto;
+            display: inline-block;
+            max-width: 800px;
+            border-top: 3px solid yellow; /* Top accent bar for gallery pages */
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* THE GALLERY GRID - This makes it look like a pro layout */
+        .photo-grid {
+            display: grid;
+            /* Creates 3 equal columns on desktop, 1 on mobile */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .photo-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 2px;
+            transition: transform 0.4s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px); /* Lifts the photo when you hover */
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         img {
-            border: 8px solid white;
-            border-radius: 2px; /* Square/slightly rounded looks more like a printed photo */
-            box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
-            margin: 20px;
-            transition: transform 0.3s ease;
+            width: 100%;      /* Makes images responsive inside the grid */
+            height: 300px;    /* Forces all gallery images to be the same height */
+            object-fit: cover; /* Crops the photos perfectly so they don't stretch */
+            border: 5px solid white;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
             cursor: pointer;
         }
 
-        img:hover {
-            transform: scale(1.05); /* Fun interactive touch */
-        }
-
-        video {
-            border-radius: 8px;
-            margin: 20px;
-            box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        video:hover {
-              transform:scale(1.05);
-        }
-
-        .gallery-link {
+        .back-link {
             font-family: 'Playfair Display', serif;
-            font-weight: bold; 
-            color: yellow; 
+            font-weight: 700; 
+            color: #000;             /* Black text for contrast */
+           background-color: yellow; /* Bright background to make it visible */
             text-decoration: none; 
-            font-size: 24px;
-            margin-left: 20px;
-            border-bottom: 2px solid transparent;
-            transition: border-bottom 0.3s;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 30px;      /* Makes it look like a physical button */
+           border-radius: 2px;
+           display: inline-block;
+           margin: 40px 0;
+           transition: all 0.3s ease;
+           box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
-        .gallery-link:hover {
-            border-bottom: 2px solid yellow;
+            /* Effect when you hover the mouse over it */
+        .back-link:hover {
+            background-color: white;
+            color: #ff4d4d;
+            transform: scale(1.05);
+        }
+
+           /* The 'Underline' effect when the button is clicked */
+      .back-link:active {
+           text-decoration: underline;
+            background-color: #ffd700; /* Slightly darker yellow when pressed */
+            transform: scale(0.98);    /* Makes it feel like a real button being pushed */
         }
     </style>
 </head>
 
 <body> 
-    <h1>THE FIRST BABIE KITTEN</h1>
+
+    <h1>BABIE BARIE'S FRIENDS</h1>
 
     <div class="content-box">
-        <strong>Meet Babie Barie: The Inspiration Behind the Code</strong><br><br>
-        This practice project marks the very beginning of my journey as a web developer, but it also serves as a digital home for a very special member of the family.<br><br>
-
-        Babie Barie isn't just a pet; she’s our very first cat and the true "boss" of the household. From her tiny paws to her soft, irresistible fur, she has brought so much joy into our lives. These days, she’s looking a little rounder and more precious than ever our cutie cat is officially a <i>"babie buntis"</i> (pregnant) and a proud mama-to-be!<br><br>
-
-        Whether she’s lounging around or demanding attention, I can’t help but want to shower her with love. Between coding sessions, I’m always tempted to stop everything just to kiss her adorable pango nose and pet her incredibly soft fur.
+        Welcome to the gallery! Here are even more photos of our cutie cats.
     </div>
 
-    <img height="300px" src="images/meowgical.jpg" alt="a photo of a grey persian cat">
-    <img height="300px" src="images/kit-mata.jpg" alt="a photo of a grey persian cat">
-    <img height="300px" src="images/kit-bed.jpg" alt="a photo of a grey persian cat">
-    <img height="300px" src="images/kit-box.jpg" alt="a photo of a grey persian cat">
+    <div class="photo-grid">
+        <div class="photo-card">
+            <img src="images/babie-momie.jpg" alt="kitten photo">
+        </div>
+        <div class="photo-card">
+            <img src="images/mochiche.jpg" alt="another kitten">
+        </div>
+        <div class="photo-card">
+            <img src="images/lokikie.jpg" alt="another cute kitten">
+        </div>
+         <div class="photo-card">
+            <img src="images/twi-mi.jpg" alt="another cute kitten">
+        </div>
+         <div class="photo-card">
+            <img src="images/kit-mie-bed.jpg" alt="another cute kitten">
+        </div>
+        </div>
 
-    <p class="content-box"><strong>The Inner Circle:</strong> This is also her another photos with her friends</p>
+    <br>
+    <a href="index.html" class="back-link">← Go Back Home</a>
 
-    <img height="200px" src="images/kit-twie.jpg" alt="a group of cats"> 
-    <img height="200px" src="images/kit-mie.jpg" alt="three penguins">
-    <img height="200px" src="images/kit-twi2.jpg" alt="sleeping koala"> 
-    <img height="200px" src="images/kit-dy-mi.jpg" alt="sleeping koala">
-    <img height="200px" src="images/kit-miy.jpg" alt="sleeping koala">
-     <img height="200px" src="images/barie-sleep.jpg" alt="sleeping koala">   
-
-    <p class="content-box"><strong>In Motion:</strong> Watch Babie Barie in action!</p>
-
-    <video width="320" height="560" controls>
-        <source src="images/yupak.mp4" type="video/mp4">
-    </video>      
-    
-    <video width="320" height="560" controls>
-        <source src="images/kit-bag.mp4" type="video/mp4">
-    </video>
-
-    <video width="320" height="560" controls>
-        <source src="images/kit-dek.mp4" type="video/mp4">
-    </video>
-          
-    <video width="320" height="560" controls>
-        <source src="images/kit-flor.mp4" type="video/mp4">      
-    </video>
-    
-    <br><br>
-    <a href="gallery.html" class="gallery-link">Click here to see more kittens →</a>
-    <br><br>
-
-</body> 
+</body>
 </html>
