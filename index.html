@@ -81,7 +81,7 @@
             box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
             margin: 20px;
             transition: transform 0.3s ease;
-            cursor: pointer;
+            cursor: pointer; 
         }
 
         img:hover {
@@ -100,20 +100,38 @@
               transform:scale(1.05);
         }
 
-        .gallery-link {
+   .gallery-link {
             font-family: 'Playfair Display', serif;
-            font-weight: bold; 
-            color: yellow; 
+            font-weight: 700; 
+            color: navyblue;             /* navy blue text for contrast */
+           background-color: yellow; /* Bright background to make it visible */
             text-decoration: none; 
-            font-size: 24px;
-            margin-left: 20px;
-            border-bottom: 2px solid transparent;
-            transition: border-bottom 0.3s;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 12px 30px;      /* Makes it look like a physical button */
+           border-radius: 2px;
+           display: inline-block;
+           margin: 40px 0;
+           transition: all 0.3s ease;             
+           box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
-        .gallery-link:hover {
-            border-bottom: 2px solid yellow;
+            /* Effect when you hover the mouse over it */ 
+    .gallery-link:hover {
+            background-color: white;
+            color: #ff4d4d;
+            transform: scale(1.05);
+            text-decoration: underline;     
         }
+
+           /* The 'Underline' effect when the button is clicked */
+    .gallery-link:active {
+           text-decoration: underline;
+            background-color: #ffd700; /* Slightly darker yellow when pressed */
+            transform: scale(0.98);    /* Makes it feel like a real button being pushed */
+        }
+    
     </style>
 </head>
 
@@ -124,12 +142,12 @@
         <strong>Meet Babie Barie: The Inspiration Behind the Code</strong><br><br>
         This practice project marks the very beginning of my journey as a web developer, but it also serves as a digital home for a very special member of the family.<br><br>
 
-        Babie Barie isn't just a pet; she’s our very first cat and the true "boss" of the household. From her tiny paws to her soft, irresistible fur, she has brought so much joy into our lives. These days, she’s looking a little rounder and more precious than ever our cutie cat is officially a <i>"babie buntis"</i> (pregnant) and a proud mama-to-be!<br><br>
+        Babie Barie isn't just a pet; she’s our very first cat and the true "boss" of the household. From her tiny paws to her soft, irresistible fur, she has brought so much joy into our lives. These days, she’s looking a little rounder and more precious than ever our cutie cat is officially a <i>"babie buntis"</i> (pregnant) and a proud mama to be!<br><br>
 
         Whether she’s lounging around or demanding attention, I can’t help but want to shower her with love. Between coding sessions, I’m always tempted to stop everything just to kiss her adorable pango nose and pet her incredibly soft fur.
     </div>
 
-    <img height="300px" src="images/meowgical.jpg" alt="a photo of a grey persian cat">
+    <img height="300px" src="images/meowgical.jpg" alt="a photo of a grey persian cat"> 
     <img height="300px" src="images/kit-mata.jpg" alt="a photo of a grey persian cat">
     <img height="300px" src="images/kit-bed.jpg" alt="a photo of a grey persian cat">
     <img height="300px" src="images/kit-box.jpg" alt="a photo of a grey persian cat">
@@ -141,7 +159,7 @@
     <img height="200px" src="images/kit-twi2.jpg" alt="sleeping koala"> 
     <img height="200px" src="images/kit-dy-mi.jpg" alt="sleeping koala">
     <img height="200px" src="images/kit-miy.jpg" alt="sleeping koala">
-     <img height="200px" src="images/barie-sleep.jpg" alt="sleeping koala">   
+    <img height="200px" src="images/barie-sleep.jpg" alt="sleeping koala"> 
 
     <p class="content-box"><strong>In Motion:</strong> Watch Babie Barie in action!</p>
 
@@ -162,7 +180,7 @@
     </video>
     
     <br><br>
-    <a href="gallery.html" class="gallery-link">Click here to see more kittens →</a>
+    <a href="gallery.html" class="gallery-link">Click here to see more cute kittens &#x1F63B; →</a>
     <br><br>
 
 </body> 
